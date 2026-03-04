@@ -8149,3 +8149,52 @@ ul {
     transform: translateY(-4px);
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
 }
+
+/* Sticky Call Expert CTA */
+.sticky-cta-call-expert {
+    position: fixed;
+    right: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    background: #fa401b;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 8px 0 0 8px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    text-decoration: none;
+    transition: background 0.2s;
+    margin-bottom: 16px;
+}
+
+.sticky-cta-call-expert:hover {
+    background: #c92e00;
+    color: #fff;
+}
+
+/* Sticky Enquiry Form CTA */
+.sticky-cta-enquiry-form {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #007bff;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 8px 0 0 8px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    text-decoration: none;
+    transition: background 0.2s;
+    margin-bottom: 80px;
+    /* space for WhatsApp icon */
+}
+
+.sticky-cta-enquiry-form:hover {
+    background: #0056b3;
+    color: #fff;
+}
