@@ -2869,7 +2869,12 @@ ul {
 }
 
 .about-two__btn {
-    margin-top: 23px;
+    margin-top: 32px;
+    display: block;
+    max-width: 320px;
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
 }
 
 .about-two__right {
