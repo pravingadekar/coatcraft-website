@@ -83,26 +83,20 @@ h6 {
     -webkit-user-select: none;
 }
 
-.logo-box1 .site-logo {
-    max-width: 200px;
-    /* desktop max width */
-    width: 100%;
-    /* scales down on smaller screens */
-    height: auto;
+.logo-box1 .site-logo,
+.logo-box2 img {
+    height: 56px;
+    /* desktop logo height */
+    width: auto;
+    max-width: none;
     display: block;
-}
-
-/* override for header so it doesn't become too big on large screens */
-@media (min-width: 1200px) {
-    .logo-box1 .site-logo {
-        max-width: 220px;
-    }
 }
 
 /* Optional: smaller logo on mobile */
 @media (max-width: 576px) {
-    .logo-box1 .site-logo {
-        max-width: 140px;
+    .logo-box1 .site-logo,
+    .logo-box2 img {
+        height: 42px;
     }
 }
 
@@ -606,8 +600,8 @@ ul {
     position: relative;
     display: block;
     float: left;
-    padding-top: 24px;
-    padding-bottom: 9px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .logo-box1 a {
@@ -3381,6 +3375,8 @@ ul {
 
 .project-one__img img {
     width: 100%;
+    height: 320px;
+    object-fit: cover;
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transition: opacity 500ms ease, -webkit-transform 500ms ease;
@@ -3519,6 +3515,8 @@ ul {
 .testimonial-one__single-client-img {
     position: relative;
     display: block;
+    width: 81px;
+    flex-shrink: 0;
 }
 
 .testimonial-one__single-client-img img {
@@ -3745,6 +3743,14 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.news-one__top .section-title {
+    max-width: 760px;
+    margin-bottom: 0;
 }
 
 .news-one .shape1 {
@@ -3915,6 +3921,9 @@ ul {
     position: relative;
     display: block;
     overflow: hidden;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
 }
 
 .news-one__list-item-img img {
@@ -5676,6 +5685,7 @@ ul {
     z-index: 2;
 }
 
+.page-header__inner h1,
 .page-header__inner h2 {
     color: #ffffff;
     font-size: 80px;
@@ -8197,4 +8207,12 @@ ul {
 .sticky-cta-enquiry-form:hover {
     background: #0056b3;
     color: #fff;
+}
+/* City landing pages: tighter spacing around the intro and FAQ blocks */
+.about-one.city-intro {
+    padding: 60px 0 0;
+}
+
+.services-single.city-faq {
+    padding: 0 0 40px;
 }
