@@ -1855,6 +1855,7 @@ display: none;
     right: 15px;
 }
 
+.page-header__inner h1,
 .page-header__inner h2 {
     font-size: 47px;
 }

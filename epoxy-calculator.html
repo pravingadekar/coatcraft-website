@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epoxy Flooring Cost Calculator | CoatCraft Solutions</title>
+    <meta name="description" content="Free epoxy flooring cost calculator: estimate material and labour cost for your floor area and coating type. Get an exact quote from CoatCraft Solutions." />
+    <link rel="canonical" href="https://www.coatcraftsolutions.com/epoxy-calculator.html" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Epoxy Flooring Cost Calculator | CoatCraft Solutions" />
+    <meta property="og:description" content="Free epoxy flooring cost calculator: estimate material and labour cost for your floor area and coating type. Get an exact quote from CoatCraft Solutions." />
+    <meta property="og:url" content="https://www.coatcraftsolutions.com/epoxy-calculator.html" />
+    <meta property="og:image" content="https://www.coatcraftsolutions.com/assets/images/og/epoxy-floor-og.jpg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .box {
+            background: #fff;
+            padding: 20px;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: auto;
+            max-height: 95vh;
+        }
+
+        h3 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        h4 {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 4px;
+            color: #333;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            min-height: 44px;
+            transition: background 0.3s;
+        }
+
+        button:active {
+            background: #0056b3;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .section {
+            background: #f1f1f1;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+
+        .total {
+            background: #e3f2fd;
+            padding: 15px;
+            font-weight: bold;
+            border-radius: 6px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        /* Tablet (768px and below) */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .box {
+                padding: 18px;
+                border-radius: 8px;
+            }
+
+            h3 {
+                font-size: 22px;
+            }
+
+            select,
+            input {
+                padding: 12px;
+                font-size: 16px;
+            }
+
+            button {
+                padding: 12px;
+                font-size: 16px;
+                min-height: 48px;
+            }
+
+            .section {
+                padding: 12px;
+                margin-bottom: 12px;
+            }
+        }
+
+        /* Mobile (480px and below) */
+        @media (max-width: 480px) {
+            body {
+                padding: 8px;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding-top: 10px;
+            }
+
+            .box {
+                padding: 15px;
+                max-height: none;
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            h4 {
+                font-size: 15px;
+                margin: 8px 0;
+            }
+
+            select,
+            input {
+                padding: 12px;
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            button {
+                padding: 12px;
+                font-size: 16px;
+                min-height: 48px;
+                margin-bottom: 8px;
+            }
+
+            label {
+                font-size: 13px;
+                margin-bottom: 3px;
+            }
+
+            .section {
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            .total {
+                padding: 12px;
+                font-size: 18px;
+            }
+        }
+
+        /* Extra small phones (under 360px) */
+        @media (max-width: 360px) {
+            .box {
+                padding: 12px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            select,
+            input {
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            button {
+                padding: 10px;
+                font-size: 15px;
+                min-height: 44px;
+            }
+
+            .section {
+                padding: 8px;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h3>Epoxy Company Calculator</h3>
+
+        <!-- Add Company -->
+        <div class="section">
+            <h4>Add New Company</h4>
+            <input type="text" id="newCompany" placeholder="Enter Company Name">
+            <button onclick="addCompany()">Add Company</button>
+        </div>
+
+        <!-- Select Company -->
+        <select id="company" onchange="loadRates()">
+            <option value="">-- Select Company --</option>
+        </select>
+
+        <!-- Rates -->
+        <div class="section">
+            <h4>Set / Update Rates</h4>
+            <input type="number" id="primerRate" placeholder="Primer Rate">
+            <input type="number" id="screedRate" placeholder="Screed Rate">
+            <input type="number" id="topcoatRate" placeholder="Topcoat Rate">
+            <input type="number" id="pigmentRate" placeholder="Pigment Rate">
+            <button onclick="saveRates()">Save Rates</button>
+        </div>
+
+        <!-- Kits -->
+        <div class="section">
+            <h4>Kits (Select or Type Manually)</h4>
+
+            <label>Primer Kits</label>
+            <input list="kitOptions" id="primerKits">
+
+            <label>Screed Kits</label>
+            <input list="kitOptions" id="screedKits">
+
+            <label>Topcoat Kits</label>
+            <input list="kitOptions" id="topcoatKits">
+
+            <label>Pigment Qty</label>
+            <input list="kitOptions" id="pigmentKits">
+
+            <!-- Common Dropdown 1–50 -->
+            <datalist id="kitOptions">
+                <script>
+                    for (let i = 1; i <= 50; i++) {
+                        document.write('<option value="' + i + '">');
+                    }
+                </script>
+            </datalist>
+
+        </div>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div class="total">
+            Grand Total: ₹ <span id="grandTotal">0</span>
+        </div>
+
+    </div>
+
+    <script>
+
+        // Load companies on page load
+        window.onload = function () {
+            loadCompanies();
+        };
+
+        // Load Company List
+        function loadCompanies() {
+            let companyList = JSON.parse(localStorage.getItem("companyList")) || [];
+            let dropdown = document.getElementById("company");
+
+            dropdown.innerHTML = '<option value="">-- Select Company --</option>';
+
+            companyList.forEach(company => {
+                let option = document.createElement("option");
+                option.value = company;
+                option.textContent = company;
+                dropdown.appendChild(option);
+            });
+        }
+
+        // Add Company
+        function addCompany() {
+            let name = document.getElementById("newCompany").value.trim();
+            if (!name) return alert("Enter company name");
+
+            let companyList = JSON.parse(localStorage.getItem("companyList")) || [];
+
+            if (companyList.includes(name)) {
+                alert("Company already exists!");
+                return;
+            }
+
+            companyList.push(name);
+            localStorage.setItem("companyList", JSON.stringify(companyList));
+
+            document.getElementById("newCompany").value = "";
+            loadCompanies();
+            alert("Company Added ✅");
+        }
+
+        // Save Rates
+        function saveRates() {
+            let company = document.getElementById("company").value;
+            if (!company) return alert("Select company first");
+
+            let rates = {
+                primer: parseFloat(document.getElementById("primerRate").value) || 0,
+                screed: parseFloat(document.getElementById("screedRate").value) || 0,
+                topcoat: parseFloat(document.getElementById("topcoatRate").value) || 0,
+                pigment: parseFloat(document.getElementById("pigmentRate").value) || 0
+            };
+
+            localStorage.setItem("rates_" + company, JSON.stringify(rates));
+            alert("Rates Saved ✅");
+        }
+
+        // Load Rates
+        function loadRates() {
+            let company = document.getElementById("company").value;
+            let stored = localStorage.getItem("rates_" + company);
+
+            if (stored) {
+                let rates = JSON.parse(stored);
+                document.getElementById("primerRate").value = rates.primer || "";
+                document.getElementById("screedRate").value = rates.screed || "";
+                document.getElementById("topcoatRate").value = rates.topcoat || "";
+                document.getElementById("pigmentRate").value = rates.pigment || "";
+            } else {
+                document.getElementById("primerRate").value = "";
+                document.getElementById("screedRate").value = "";
+                document.getElementById("topcoatRate").value = "";
+                document.getElementById("pigmentRate").value = "";
+            }
+        }
+
+        // Calculate Total
+        function calculate() {
+            let company = document.getElementById("company").value;
+            let stored = localStorage.getItem("rates_" + company);
+            if (!stored) return alert("Set rates first!");
+
+            let rates = JSON.parse(stored);
+
+            let primerKits = parseFloat(document.getElementById("primerKits").value) || 0;
+            let screedKits = parseFloat(document.getElementById("screedKits").value) || 0;
+            let topcoatKits = parseFloat(document.getElementById("topcoatKits").value) || 0;
+            let pigmentKits = parseFloat(document.getElementById("pigmentKits").value) || 0;
+
+            let total =
+                primerKits * rates.primer +
+                screedKits * rates.screed +
+                topcoatKits * rates.topcoat +
+                pigmentKits * rates.pigment;
+
+            document.getElementById("grandTotal").innerText = total.toFixed(2);
+        }
+
+    </script>
+
+</body>
+
+</html>
