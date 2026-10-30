@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CoatCraft Multi Manufacturer Engineering Calculator</title>
+    <meta charset="UTF-8">
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f9;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0a3d62;
+        }
+
+        .section {
+            margin-top: 30px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #0a3d62;
+            color: white;
+            border: none;
+            font-weight: bold;
+        }
+
+        .result {
+            margin-top: 25px;
+            background: #f4f8fb;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .total {
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CoatCraft Epoxy Engineering Dashboard</h1>
+
+        <div class="section">
+
+            <label>Select Manufacturer</label>
+            <select id="brand">
+                <option value="floortech">Floortech</option>
+                <option value="highbond">Highbond (Floorbond)</option>
+            </select>
+
+            <label>Area (sqft)</label>
+            <input type="number" id="area">
+
+            <label>Select System Thickness</label>
+            <select id="system">
+                <option value="3">3mm (2mm Screed + 1mm Topcoat)</option>
+                <option value="4">4mm (3mm Screed + 1mm Topcoat)</option>
+                <option value="5">5mm (4mm Screed + 1mm Topcoat)</option>
+            </select>
+
+            <label>
+                <input type="checkbox" id="wastage"> Add 10% Wastage
+            </label>
+
+            <label>
+                <input type="checkbox" id="gst"> Add 18% GST
+            </label>
+
+            <button onclick="calculate()">Calculate Full Cost</button>
+
+            <div id="result" class="result"></div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function calculate() {
+
+            var sqft = parseFloat(document.getElementById("area").value);
+            var system = parseInt(document.getElementById("system").value);
+            var brand = document.getElementById("brand").value;
+            var addWastage = document.getElementById("wastage").checked;
+            var addGST = document.getElementById("gst").checked;
+
+            if (!sqft) {
+                alert("Enter valid area");
+                return;
+            }
+
+            var sqmt = sqft / 10.7639;
+
+            // ===== Thickness Logic =====
+            var screedThickness = system - 1;
+            var topThickness = 1;
+
+            // ===== Brand Data =====
+            var brands = {
+
+                floortech: {
+                    primerRate: 1300,
+                    primerKitSize: 5,
+                    screedRate: 1850,
+                    screedKitSize: 18,
+                    topRate: 2350,
+                    topKitSize: 15.5,
+                    pigmentRate: 270
+                },
+
+                highbond: {
+                    primerRate: 259 * 20, // 20kg bucket
+                    primerKitSize: 20,
+                    screedRate: 8200,
+                    screedKitSize: 80,
+                    topRate: 2070,
+                    topKitSize: 16,
+                    pigmentRate: 0
+                }
+
+            };
+
+            var selected = brands[brand];
+
+            // ===== Consumption =====
+            var primerKg = sqmt * 0.25;
+            var screedKg = sqmt * screedThickness * 2;
+            var topKg = sqmt * topThickness * 1.6;
+
+            if (addWastage) {
+                primerKg *= 1.10;
+                screedKg *= 1.10;
+                topKg *= 1.10;
+            }
+
+            // ===== Kit Calculation =====
+            var primerKit = Math.ceil(primerKg / selected.primerKitSize);
+            var screedKit = Math.ceil(screedKg / selected.screedKitSize);
+            var topKit = Math.ceil(topKg / selected.topKitSize);
+
+            // ===== Cost =====
+            var primerTotal = primerKit * selected.primerRate;
+            var screedTotal = screedKit * selected.screedRate;
+            var topTotal = topKit * selected.topRate;
+
+            var pigmentTotal = 0;
+            if (selected.pigmentRate > 0) {
+                pigmentTotal = topKit * selected.pigmentRate;
+            }
+
+            var subTotal = primerTotal + screedTotal + topTotal + pigmentTotal;
+
+            var gstAmount = 0;
+            if (addGST) {
+                gstAmount = subTotal * 0.18;
+            }
+
+            var grandTotal = subTotal + gstAmount;
+            var ratePerSqft = grandTotal / sqft;
+
+            // ===== Output =====
+            document.getElementById("result").innerHTML = `
+<h3>Brand: ${brand.toUpperCase()}</h3>
+
+<strong>System:</strong> ${screedThickness}mm Screed + 1mm Topcoat<br><br>
+
+<h3>Material Required</h3>
+Primer: ${primerKit} Kits<br>
+Screed: ${screedKit} Kits<br>
+Topcoat: ${topKit} Kits<br><br>
+
+<h3>Cost Breakdown</h3>
+Primer: ₹ ${primerTotal.toLocaleString()}<br>
+Screed: ₹ ${screedTotal.toLocaleString()}<br>
+Topcoat: ₹ ${topTotal.toLocaleString()}<br>
+Pigment: ₹ ${pigmentTotal.toLocaleString()}<br><br>
+
+Sub Total: ₹ ${subTotal.toLocaleString()}<br>
+GST: ₹ ${gstAmount.toLocaleString()}<br><br>
+
+<div class="total">
+Grand Total: ₹ ${grandTotal.toLocaleString()}
+</div>
+
+<br>
+Rate Per Sqft: ₹ ${ratePerSqft.toFixed(2)}
+`;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
