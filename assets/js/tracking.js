@@ -4,7 +4,7 @@
  * Lead / WhatsApp / call events are fired by lead-capture.js.
  */
 (function () {
-  var GA4_ID = "";        // e.g. "G-AB12CD34EF"  (GA4 > Admin > Data streams)
+  var GA4_ID = "G-CCBJ464VEY"; // GA4 > Admin > Data streams
   var META_PIXEL_ID = ""; // e.g. "123456789012345" (Meta Events Manager)
 
   if (GA4_ID) {
