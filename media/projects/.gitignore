@@ -1,0 +1,4 @@
+# Photos and index.json are written on the server by photo-upload/index.php
+*
+!.htaccess
+!.gitignore
