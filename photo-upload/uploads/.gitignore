@@ -1,0 +1,4 @@
+# Photos uploaded on the server stay on the server
+*
+!.htaccess
+!.gitignore

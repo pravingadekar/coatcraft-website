@@ -3,7 +3,7 @@
 # otherwise visitors are sent to https before the certificate exists.
 
 Options -Indexes
-DirectoryIndex index.html
+DirectoryIndex index.html index.php
 
 RewriteEngine On
 
