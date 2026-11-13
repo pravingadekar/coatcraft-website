@@ -8216,3 +8216,13 @@ ul {
 .services-single.city-faq {
     padding: 0 0 40px;
 }
+
+.city-guides {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.city-guides a {
+    color: var(--thm-primary);
+    text-decoration: underline;
+}

@@ -1,0 +1,8 @@
+---
+# cPanel Git deployment (GoDaddy): Git Version Control > Manage > Pull or Deploy > Deploy HEAD Commit
+# Copies the site into the coatcraftsolutions.com document root. The * glob skips
+# dotfiles, so .git and this file are never published.
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/qn3vvdi8m7ea/public_html/coatcraftsolutions.com/
+    - /bin/cp -R * $DEPLOYPATH
