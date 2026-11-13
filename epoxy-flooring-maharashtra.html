@@ -76,83 +76,123 @@
 
     <!-- Structured Data (LocalBusiness + Service + FAQPage) -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "LocalBusiness",
+      "@id": "https://www.coatcraftsolutions.com/#company",
+      "name": "CoatCraft Solutions",
+      "url": "https://www.coatcraftsolutions.com/epoxy-flooring-maharashtra.html",
+      "telephone": "+91-7745889111",
+      "email": "CoatCraftSolutions@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No. LG-16, Chakan High Street, Near Bajaj Auto, Kharabwadi",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "410501",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "19.7515",
+        "longitude": "75.7139"
+      },
+      "areaServed": [
         {
-          "@type": "LocalBusiness",
-          "@id": "https://www.coatcraftsolutions.com/#company",
-          "name": "CoatCraft Solutions",
-          "url": "https://www.coatcraftsolutions.com/epoxy-flooring-maharashtra.html",
-          "telephone": "+91-7745889111",
-          "email": "CoatCraftSolutions@gmail.com",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Shop No. LG-16, Chakan High Street, Near Bajaj Auto, Kharabwadi",
-            "addressLocality": "Pune",
-            "addressRegion": "Maharashtra",
-            "postalCode": "410501",
-            "addressCountry": "IN"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "19.7515",
-            "longitude": "75.7139"
-          },
-          "areaServed": [
-            { "@type": "State", "name": "Maharashtra" },
-            { "@type": "Country", "name": "India" }
-          ],
-          "openingHoursSpecification": [{
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-            "opens": "09:00",
-            "closes": "18:00"
-          }],
-          "image": ["https://www.coatcraftsolutions.com/assets/images/og/epoxy-floor-og.jpg"],
-          "priceRange": "₹₹",
-          "sameAs": [
-            "https://www.facebook.com/profile.php?id=61585615962846",
-            "https://www.instagram.com/coatcraftsolutions"
-          ]
+          "@type": "State",
+          "name": "Maharashtra"
         },
         {
-          "@type": "Service",
-          "serviceType": "Epoxy Flooring Installation & Industrial Coatings",
-          "provider": { "@id": "https://www.coatcraftsolutions.com/#company" },
-          "areaServed": [
-            { "@type": "State", "name": "Maharashtra" },
-            { "@type": "Country", "name": "India" }
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
           ],
-          "description": "Industrial epoxy flooring, PU flooring, resin coating and anti-slip surface installation for factories and warehouses in Maharashtra, Pune, Mumbai, Maharashtra, Nagpur and Aurangabad."
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "image": [
+        "https://www.coatcraftsolutions.com/assets/images/og/epoxy-floor-og.jpg"
+      ],
+      "priceRange": "₹₹",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61585615962846",
+        "https://www.instagram.com/coatcraftsolutions",
+        "https://www.google.com/maps?cid=13382990552916473938",
+        "https://www.google.com/search?kgmid=/g/11mkmmnq53"
+      ],
+      "hasMap": "https://www.google.com/maps?cid=13382990552916473938"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Epoxy Flooring Installation & Industrial Coatings",
+      "provider": {
+        "@id": "https://www.coatcraftsolutions.com/#company"
+      },
+      "areaServed": [
+        {
+          "@type": "State",
+          "name": "Maharashtra"
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is the cost of epoxy flooring in Maharashtra?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Epoxy flooring cost in Maharashtra depends on area, surface preparation and coating type. Call 7745889111 for a free site visit and quote." }
-            },
-            {
-              "@type": "Question",
-              "name": "How long does epoxy flooring installation take in Maharashtra?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Most installations take 2-5 days depending on project size." }
-            },
-            {
-              "@type": "Question",
-              "name": "Which cities in Maharashtra do you cover?",
-              "acceptedAnswer": { "@type": "Answer", "text": "We work across Maharashtra, including Pune, Mumbai, Thane, Maharashtra, Nagpur, Aurangabad, Kolhapur, Solapur, Ahmednagar, Jalgaon, Satara and Sangli." }
-            },
-            {
-              "@type": "Question",
-              "name": "Which areas in Maharashtra do you serve?",
-              "acceptedAnswer": { "@type": "Answer", "text": "We serve all major MIDC and industrial areas in Maharashtra, such as Chakan, Bhosari, Ambad, Satpur, Waluj, Butibori and Supa." }
-            }
-          ]
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "description": "Industrial epoxy flooring, PU flooring, resin coating and anti-slip surface installation for factories and warehouses in Maharashtra, Pune, Mumbai, Maharashtra, Nagpur and Aurangabad."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the cost of epoxy flooring in Maharashtra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Epoxy flooring cost in Maharashtra depends on area, surface preparation and coating type. Call 7745889111 for a free site visit and quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does epoxy flooring installation take in Maharashtra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most installations take 2-5 days depending on project size."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which cities in Maharashtra do you cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We work across Maharashtra, including Pune, Mumbai, Thane, Maharashtra, Nagpur, Aurangabad, Kolhapur, Solapur, Ahmednagar, Jalgaon, Satara and Sangli."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which areas in Maharashtra do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We serve all major MIDC and industrial areas in Maharashtra, such as Chakan, Bhosari, Ambad, Satpur, Waluj, Butibori and Supa."
+          }
         }
       ]
     }
+  ]
+}
     </script>
 
     <script type="application/ld+json">
