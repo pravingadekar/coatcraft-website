@@ -1851,6 +1851,7 @@ ul {
     transition-delay: 1000ms;
 }
 
+.main-slider h1,
 .main-slider h2 {
     position: relative;
     display: block;
@@ -1875,6 +1876,7 @@ ul {
     transition: all 1000ms ease;
 }
 
+.main-slider .swiper-slide-active h1,
 .main-slider .swiper-slide-active h2 {
     opacity: 1;
     -webkit-transform: perspective(400px) rotateY(0deg) translateY(0px);
