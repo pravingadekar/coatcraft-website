@@ -1,0 +1,44 @@
+# CoatCraft Solutions – Apache settings for GoDaddy cPanel hosting.
+# Needs the SSL certificate for coatcraftsolutions.com and www (cPanel > SSL/TLS Status),
+# otherwise visitors are sent to https before the certificate exists.
+
+Options -Indexes
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# Leave SSL certificate validation alone
+RewriteRule ^\.well-known/ - [L]
+
+# One address for Google: https://www.coatcraftsolutions.com
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.coatcraftsolutions.com%{REQUEST_URI} [L,R=301]
+
+# /index.html is the same page as / – send it to the canonical address
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [L,R=301]
+
+# Old duplicate page
+Redirect 301 "/epoxy-flooring-nagpur (1).html" /epoxy-flooring-nagpur.html
+
+ErrorDocument 404 /index.html
+
+# Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
+</IfModule>
+
+# Browser caching: images and videos for a year, CSS/JS for a month, HTML always fresh
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType video/mp4 "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
