@@ -8226,3 +8226,44 @@ ul {
     color: var(--thm-primary);
     text-decoration: underline;
 }
+
+/* MIDC / industrial area landing pages */
+.area-text {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.area-card {
+    height: calc(100% - 30px);
+    text-align: left;
+}
+
+.area-card__links {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.area-card__links a,
+.area-list a {
+    color: var(--thm-primary);
+    text-decoration: underline;
+}
+
+.area-list {
+    margin: 10px 0 0;
+    padding-left: 18px;
+    line-height: 1.9;
+}
+
+.area-process {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 22px;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.area-process li {
+    margin-bottom: 10px;
+}
