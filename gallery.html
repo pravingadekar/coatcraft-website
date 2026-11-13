@@ -219,10 +219,15 @@
             <div class="container">
 
                 <div class="gallery-page__tabs">
+                    <button type="button" class="gallery-page__tab-btn" data-target="gallery-latest" style="display: none;">Latest Projects</button>
                     <button type="button" class="gallery-page__tab-btn active" data-target="gallery-residential">Residential</button>
                     <button type="button" class="gallery-page__tab-btn" data-target="gallery-industrial">Industrial</button>
                 </div>
                 <p class="gallery-page__video-hint">Tap any video thumbnail to play it.</p>
+
+                <div id="gallery-latest" class="gallery-page__panel">
+                    <div class="gallery-page__grid" id="gallery-latest-grid"></div>
+                </div>
 
                 <div id="gallery-residential" class="gallery-page__panel active">
                     <div class="gallery-page__grid">
@@ -662,6 +667,22 @@
             transform: scale(1.08);
         }
 
+        .gallery-page__item--caption {
+            position: relative;
+        }
+
+        .gallery-page__caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 22px 10px 8px;
+            color: #fff;
+            font-size: 14px;
+            line-height: 1.3;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+        }
+
         .gallery-page__video-hint {
             text-align: center;
             color: #6f6f6f;
@@ -730,6 +751,40 @@
                     document.getElementById(btn.getAttribute('data-target')).classList.add('active');
                 });
             });
+
+            // Photos uploaded from the phone (photo-upload/) are listed in media/projects/index.json
+            fetch('media/projects/index.json?v=' + Date.now(), { cache: 'no-store' })
+                .then(function (r) { return r.ok ? r.json() : []; })
+                .then(function (photos) {
+                    if (!Array.isArray(photos) || !photos.length) return;
+                    var grid = document.getElementById('gallery-latest-grid');
+                    photos.forEach(function (p) {
+                        var a = document.createElement('a');
+                        a.href = 'media/projects/' + encodeURIComponent(p.file);
+                        a.className = 'gallery-page__item gallery-page__item--caption img-popup';
+                        a.setAttribute('data-group', '2');
+                        if (p.note) a.title = p.note;
+                        var img = document.createElement('img');
+                        img.src = a.href;
+                        img.loading = 'lazy';
+                        img.alt = p.note ? p.note + ' - CoatCraft Solutions' : 'Epoxy flooring project by CoatCraft Solutions';
+                        a.appendChild(img);
+                        if (p.note) {
+                            var cap = document.createElement('span');
+                            cap.className = 'gallery-page__caption';
+                            cap.textContent = p.note;
+                            a.appendChild(cap);
+                        }
+                        grid.appendChild(a);
+                    });
+                    if (window.jQuery && jQuery.fn.magnificPopup) {
+                        jQuery(grid).find('.img-popup').magnificPopup({ type: 'image', closeOnContentClick: true, closeBtnInside: false, gallery: { enabled: true } });
+                    }
+                    var tab = document.querySelector('[data-target="gallery-latest"]');
+                    tab.style.display = "";
+                    tab.click();
+                })
+                .catch(function () {});
 
             // Click-to-load video cards: nothing is fetched until the user clicks
             document.querySelectorAll('.gallery-page__video-card').forEach(function (card) {
