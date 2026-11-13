@@ -76,81 +76,115 @@
 
     <!-- Structured Data (LocalBusiness + Service + FAQPage) -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "LocalBusiness",
+      "@id": "https://www.coatcraftsolutions.com/#company",
+      "name": "CoatCraft Solutions",
+      "url": "https://www.coatcraftsolutions.com/epoxy-flooring-india.html",
+      "telephone": "+91-7745889111",
+      "email": "CoatCraftSolutions@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No. LG-16, Chakan High Street, Near Bajaj Auto, Kharabwadi",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "410501",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "20.5937",
+        "longitude": "78.9629"
+      },
+      "areaServed": [
         {
-          "@type": "LocalBusiness",
-          "@id": "https://www.coatcraftsolutions.com/#company",
-          "name": "CoatCraft Solutions",
-          "url": "https://www.coatcraftsolutions.com/epoxy-flooring-india.html",
-          "telephone": "+91-7745889111",
-          "email": "CoatCraftSolutions@gmail.com",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Shop No. LG-16, Chakan High Street, Near Bajaj Auto, Kharabwadi",
-            "addressLocality": "Pune",
-            "addressRegion": "Maharashtra",
-            "postalCode": "410501",
-            "addressCountry": "IN"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "20.5937",
-            "longitude": "78.9629"
-          },
-          "areaServed": [
-            { "@type": "Country", "name": "India" }
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
           ],
-          "openingHoursSpecification": [{
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-            "opens": "09:00",
-            "closes": "18:00"
-          }],
-          "image": ["https://www.coatcraftsolutions.com/assets/images/og/epoxy-floor-og.jpg"],
-          "priceRange": "₹₹",
-          "sameAs": [
-            "https://www.facebook.com/profile.php?id=61585615962846",
-            "https://www.instagram.com/coatcraftsolutions"
-          ]
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "image": [
+        "https://www.coatcraftsolutions.com/assets/images/og/epoxy-floor-og.jpg"
+      ],
+      "priceRange": "₹₹",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61585615962846",
+        "https://www.instagram.com/coatcraftsolutions",
+        "https://www.google.com/maps?cid=13382990552916473938",
+        "https://www.google.com/search?kgmid=/g/11mkmmnq53"
+      ],
+      "hasMap": "https://www.google.com/maps?cid=13382990552916473938"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Epoxy Flooring Installation & Industrial Coatings",
+      "provider": {
+        "@id": "https://www.coatcraftsolutions.com/#company"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "description": "Industrial epoxy flooring, PU flooring, resin coating and anti-slip surface installation for factories and warehouses in India, Maharashtra, Gujarat, Karnataka and other states."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the cost of epoxy flooring in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Epoxy flooring cost in India depends on area, surface preparation and coating type. Call 7745889111 for a free site visit and quote."
+          }
         },
         {
-          "@type": "Service",
-          "serviceType": "Epoxy Flooring Installation & Industrial Coatings",
-          "provider": { "@id": "https://www.coatcraftsolutions.com/#company" },
-          "areaServed": [
-            { "@type": "Country", "name": "India" }
-          ],
-          "description": "Industrial epoxy flooring, PU flooring, resin coating and anti-slip surface installation for factories and warehouses in India, Maharashtra, Gujarat, Karnataka and other states."
+          "@type": "Question",
+          "name": "How long does epoxy flooring installation take in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most installations take 2-5 days depending on project size."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is the cost of epoxy flooring in India?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Epoxy flooring cost in India depends on area, surface preparation and coating type. Call 7745889111 for a free site visit and quote." }
-            },
-            {
-              "@type": "Question",
-              "name": "How long does epoxy flooring installation take in India?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Most installations take 2-5 days depending on project size." }
-            },
-            {
-              "@type": "Question",
-              "name": "Do you take up projects outside Maharashtra?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes, we take up epoxy and PU flooring projects across India, including Gujarat, Karnataka, Tamil Nadu, Delhi NCR, Telangana, Madhya Pradesh, Rajasthan and Goa." }
-            },
-            {
-              "@type": "Question",
-              "name": "Which areas in India do you serve?",
-              "acceptedAnswer": { "@type": "Answer", "text": "We serve PAN India: Maharashtra, Gujarat, Karnataka, Tamil Nadu, Delhi NCR, Telangana, Madhya Pradesh, Rajasthan and Goa." }
-            }
-          ]
+          "@type": "Question",
+          "name": "Do you take up projects outside Maharashtra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we take up epoxy and PU flooring projects across India, including Gujarat, Karnataka, Tamil Nadu, Delhi NCR, Telangana, Madhya Pradesh, Rajasthan and Goa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which areas in India do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We serve PAN India: Maharashtra, Gujarat, Karnataka, Tamil Nadu, Delhi NCR, Telangana, Madhya Pradesh, Rajasthan and Goa."
+          }
         }
       ]
     }
+  ]
+}
     </script>
 
     <script type="application/ld+json">

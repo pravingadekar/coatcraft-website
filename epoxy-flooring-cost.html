@@ -79,100 +79,149 @@
 
     <!-- Structured Data (Service + FAQPage) -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "LocalBusiness",
+      "@id": "https://www.coatcraftsolutions.com/#company",
+      "name": "CoatCraft Solutions",
+      "url": "https://www.coatcraftsolutions.com/epoxy-flooring-cost.html",
+      "telephone": "+91-7745889111",
+      "email": "CoatCraftSolutions@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No. LG-16, Chakan High Street, Near Bajaj Auto, Kharabwadi",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "410501",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.7575",
+        "longitude": "73.8567"
+      },
+      "openingHoursSpecification": [
         {
-          "@type": "LocalBusiness",
-          "@id": "https://www.coatcraftsolutions.com/#company",
-          "name": "CoatCraft Solutions",
-          "url": "https://www.coatcraftsolutions.com/epoxy-flooring-cost.html",
-          "telephone": "+91-7745889111",
-          "email": "CoatCraftSolutions@gmail.com",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Shop No. LG-16, Chakan High Street, Near Bajaj Auto, Kharabwadi",
-            "addressLocality": "Pune",
-            "addressRegion": "Maharashtra",
-            "postalCode": "410501",
-            "addressCountry": "IN"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "18.7575",
-            "longitude": "73.8567"
-          },
-          "openingHoursSpecification": [{
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-            "opens": "09:00",
-            "closes": "18:00"
-          }],
-          "image": ["https://www.coatcraftsolutions.com/assets/images/og/epoxy-floor-og.jpg"],
-          "priceRange": "₹₹",
-          "sameAs": [
-            "https://www.facebook.com/profile.php?id=61585615962846",
-            "https://www.instagram.com/coatcraftsolutions"
-          ]
-        },
-        {
-          "@type": "Service",
-          "serviceType": "Epoxy Flooring Installation & Industrial Coatings",
-          "provider": { "@id": "https://www.coatcraftsolutions.com/#company" },
-          "areaServed": [
-            { "@type": "City", "name": "Pune" },
-            { "@type": "City", "name": "Mumbai" },
-            { "@type": "City", "name": "Nagpur" },
-            { "@type": "City", "name": "Nashik" },
-            { "@type": "City", "name": "Aurangabad" },
-            { "@type": "City", "name": "Kolhapur" },
-            { "@type": "City", "name": "Solapur" },
-            { "@type": "City", "name": "Thane" },
-            { "@type": "City", "name": "Ahmednagar" },
-            { "@type": "State", "name": "Maharashtra" },
-            { "@type": "Country", "name": "India" }
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
           ],
-          "description": "Epoxy, PU, anti-slip and ESD flooring installation with transparent, area-based pricing across Maharashtra and India."
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "image": [
+        "https://www.coatcraftsolutions.com/assets/images/og/epoxy-floor-og.jpg"
+      ],
+      "priceRange": "₹₹",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61585615962846",
+        "https://www.instagram.com/coatcraftsolutions",
+        "https://www.google.com/maps?cid=13382990552916473938",
+        "https://www.google.com/search?kgmid=/g/11mkmmnq53"
+      ],
+      "hasMap": "https://www.google.com/maps?cid=13382990552916473938"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Epoxy Flooring Installation & Industrial Coatings",
+      "provider": {
+        "@id": "https://www.coatcraftsolutions.com/#company"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Pune"
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is the cost of epoxy flooring per square foot in India?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Basic epoxy flooring typically costs ₹35-₹70 per sq ft, self-leveling epoxy ₹80-₹150 per sq ft, and specialised systems like anti-slip or ESD flooring ₹150-₹250+ per sq ft, depending on surface condition, coating thickness and location."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Does epoxy flooring price vary by city in Maharashtra?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Prices can vary slightly by city due to transport and labour costs, but CoatCraft Solutions offers consistent, transparent pricing across Pune, Mumbai, Nagpur, Nashik, Aurangabad, Kolhapur, Solapur and Thane. Use our free calculator or call 7745889111 for a location-specific quote."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What factors affect epoxy flooring cost?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Key factors include floor area, condition of the existing surface (repairs/leveling needed), coating thickness, type of system (standard, anti-slip, ESD, chemical-resistant), and site accessibility."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is anti-slip or ESD epoxy flooring more expensive than standard epoxy flooring?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Anti-slip and ESD (electrostatic dissipative) flooring use specialised additives and multi-layer application, so they typically cost more than standard epoxy flooring, usually in the ₹150-₹250+ per sq ft range."
-              }
-            }
-          ]
+          "@type": "City",
+          "name": "Mumbai"
+        },
+        {
+          "@type": "City",
+          "name": "Nagpur"
+        },
+        {
+          "@type": "City",
+          "name": "Nashik"
+        },
+        {
+          "@type": "City",
+          "name": "Aurangabad"
+        },
+        {
+          "@type": "City",
+          "name": "Kolhapur"
+        },
+        {
+          "@type": "City",
+          "name": "Solapur"
+        },
+        {
+          "@type": "City",
+          "name": "Thane"
+        },
+        {
+          "@type": "City",
+          "name": "Ahmednagar"
+        },
+        {
+          "@type": "State",
+          "name": "Maharashtra"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "description": "Epoxy, PU, anti-slip and ESD flooring installation with transparent, area-based pricing across Maharashtra and India."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the cost of epoxy flooring per square foot in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basic epoxy flooring typically costs ₹35-₹70 per sq ft, self-leveling epoxy ₹80-₹150 per sq ft, and specialised systems like anti-slip or ESD flooring ₹150-₹250+ per sq ft, depending on surface condition, coating thickness and location."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does epoxy flooring price vary by city in Maharashtra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Prices can vary slightly by city due to transport and labour costs, but CoatCraft Solutions offers consistent, transparent pricing across Pune, Mumbai, Nagpur, Nashik, Aurangabad, Kolhapur, Solapur and Thane. Use our free calculator or call 7745889111 for a location-specific quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What factors affect epoxy flooring cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Key factors include floor area, condition of the existing surface (repairs/leveling needed), coating thickness, type of system (standard, anti-slip, ESD, chemical-resistant), and site accessibility."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is anti-slip or ESD epoxy flooring more expensive than standard epoxy flooring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Anti-slip and ESD (electrostatic dissipative) flooring use specialised additives and multi-layer application, so they typically cost more than standard epoxy flooring, usually in the ₹150-₹250+ per sq ft range."
+          }
         }
       ]
     }
+  ]
+}
     </script>
 
     <script type="application/ld+json">

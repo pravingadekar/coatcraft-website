@@ -1985,6 +1985,7 @@ display: none;
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 
+.main-slider h1,
 .main-slider h2 {
     margin-top: 33px;
     margin-bottom: 46px;
@@ -2010,6 +2011,7 @@ display: none;
 
 
 
+.main-slider h1,
 .main-slider h2 {
     margin-top: 33px;
     margin-bottom: 46px;
@@ -2038,12 +2040,14 @@ display: none;
 .main-slider-one {
     margin-top: 100px;
 }
+.main-slider h1,
 .main-slider h2 {
     margin-top: 25px;
     margin-bottom: 25px;
     font-size: 50px;
     font-weight: 700;
 }
+.main-slider h1 br,
 .main-slider h2 br{
     display: none;
 }

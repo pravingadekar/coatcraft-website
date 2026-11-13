@@ -80,77 +80,158 @@
 
     <!-- Structured Data (LocalBusiness + Service) -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "LocalBusiness",
+      "@id": "https://www.coatcraftsolutions.com/#company",
+      "name": "CoatCraft Solutions",
+      "url": "https://www.coatcraftsolutions.com/",
+      "telephone": "+91-7745889111",
+      "email": "CoatCraftSolutions@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No. LG-16, Chakan High Street, Near Bajaj Auto, Kharabwadi",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "410501",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.7575",
+        "longitude": "73.8567"
+      },
+      "areaServed": [
         {
-          "@type": "LocalBusiness",
-          "@id": "https://www.coatcraftsolutions.com/#company",
-          "name": "CoatCraft Solutions",
-          "url": "https://www.coatcraftsolutions.com/",
-          "telephone": "+91-7745889111",
-          "email": "CoatCraftSolutions@gmail.com",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Shop No. LG-16, Chakan High Street, Near Bajaj Auto, Kharabwadi",
-            "addressLocality": "Pune",
-            "addressRegion": "Maharashtra",
-            "postalCode": "410501",
-            "addressCountry": "IN"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "18.7575",
-            "longitude": "73.8567"
-          },
-          "areaServed": [
-            { "@type": "City", "name": "Pune" },
-            { "@type": "City", "name": "Mumbai" },
-            { "@type": "City", "name": "Nagpur" },
-            { "@type": "City", "name": "Nashik" },
-            { "@type": "City", "name": "Aurangabad" },
-            { "@type": "City", "name": "Kolhapur" },
-            { "@type": "City", "name": "Solapur" },
-            { "@type": "City", "name": "Thane" },
-            { "@type": "City", "name": "Ahmednagar" },
-            { "@type": "State", "name": "Maharashtra" },
-            { "@type": "Country", "name": "India" }
-          ],
-          "openingHoursSpecification": [{
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-            "opens": "09:00",
-            "closes": "18:00"
-          }],
-          "image": ["https://www.coatcraftsolutions.com/assets/images/og/epoxy-floor-og.jpg"],
-          "priceRange": "₹₹",
-          "sameAs": [
-            "https://www.facebook.com/coatcraftsolutions",
-            "https://www.linkedin.com/company/coatcraftsolutions",
-            "https://www.instagram.com/coatcraftsolutions"
-          ]
+          "@type": "City",
+          "name": "Pune"
         },
         {
-          "@type": "Service",
-          "serviceType": "Epoxy Flooring Installation & Industrial Coatings",
-          "provider": { "@id": "https://www.coatcraftsolutions.com/#company" },
-          "areaServed": [
-            {"@type": "City", "name": "Pune"},
-            {"@type": "City", "name": "Mumbai"},
-            {"@type": "City", "name": "Nagpur"},
-            {"@type": "City", "name": "Nashik"},
-            {"@type": "City", "name": "Aurangabad"},
-            {"@type": "City", "name": "Kolhapur"},
-            {"@type": "City", "name": "Solapur"},
-            {"@type": "City", "name": "Thane"},
-            {"@type": "City", "name": "Ahmednagar"},
-            {"@type": "State", "name": "Maharashtra"},
-            {"@type": "Country", "name": "India"}
-          ],
-          "description": "Industrial epoxy flooring, resin coating and anti-slip surface installation for factories and warehouses across Maharashtra."
+          "@type": "City",
+          "name": "Mumbai"
+        },
+        {
+          "@type": "City",
+          "name": "Nagpur"
+        },
+        {
+          "@type": "City",
+          "name": "Nashik"
+        },
+        {
+          "@type": "City",
+          "name": "Aurangabad"
+        },
+        {
+          "@type": "City",
+          "name": "Kolhapur"
+        },
+        {
+          "@type": "City",
+          "name": "Solapur"
+        },
+        {
+          "@type": "City",
+          "name": "Thane"
+        },
+        {
+          "@type": "City",
+          "name": "Ahmednagar"
+        },
+        {
+          "@type": "State",
+          "name": "Maharashtra"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
         }
-      ]
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "image": [
+        "https://www.coatcraftsolutions.com/assets/images/og/epoxy-floor-og.jpg"
+      ],
+      "priceRange": "₹₹",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61585615962846",
+        "https://www.instagram.com/coatcraftsolutions",
+        "https://www.google.com/maps?cid=13382990552916473938",
+        "https://www.google.com/search?kgmid=/g/11mkmmnq53"
+      ],
+      "hasMap": "https://www.google.com/maps?cid=13382990552916473938"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Epoxy Flooring Installation & Industrial Coatings",
+      "provider": {
+        "@id": "https://www.coatcraftsolutions.com/#company"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Pune"
+        },
+        {
+          "@type": "City",
+          "name": "Mumbai"
+        },
+        {
+          "@type": "City",
+          "name": "Nagpur"
+        },
+        {
+          "@type": "City",
+          "name": "Nashik"
+        },
+        {
+          "@type": "City",
+          "name": "Aurangabad"
+        },
+        {
+          "@type": "City",
+          "name": "Kolhapur"
+        },
+        {
+          "@type": "City",
+          "name": "Solapur"
+        },
+        {
+          "@type": "City",
+          "name": "Thane"
+        },
+        {
+          "@type": "City",
+          "name": "Ahmednagar"
+        },
+        {
+          "@type": "State",
+          "name": "Maharashtra"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "description": "Industrial epoxy flooring, resin coating and anti-slip surface installation for factories and warehouses across Maharashtra."
     }
+  ]
+}
     </script>
 
 </head>
@@ -329,7 +410,7 @@
                         <div class="image-layer"
                             style="background-image: url(assets/images/backgrounds/epoxy\ flooring-pune-nashik.jpg);">
                         </div>
-                        <div class="slider-bottom-shape" style="background-image: url(assets/images/shapes/);"></div>
+                        <div class="slider-bottom-shape" style="background-image: url(assets/images/shapes/slider-bottom-shape-1.png);"></div>
                         <div class="image-layer-overlay"></div>
                         <!-- /.image-layer -->
                         <div class="container">
@@ -338,7 +419,7 @@
                                     <div class="main-slider__content text-center">
                                         <div class="vertical-line"></div>
                                         <h3>Epoxy Flooring Services in Pune, Nashik, Aurangabad & Ahmednagar</h3>
-                                        <h1>Professional Epoxy Flooring Solutions in Maharashtra & Across India</h1>
+                                        <h1>Industrial Epoxy Flooring Across Maharashtra</h1>
                                         <div class="text">
                                             <p>Coatcraft Solutions specializes in epoxy flooring for industries,
                                                 warehouses, and commercial spaces in <strong>Pune</strong>,
@@ -798,9 +879,7 @@
                                         <div class="shape7 zoominout"><img loading="lazy"
                                                 src="assets/images/shapes/factory-one-shape2.png" alt="" /></div>
                                         <div class="digital-factory-one__quote-form">
-                                            <div class="shape1"
-                                                style="background-image: url(assets/images/shapes/digital-factory-one-shape1.png);">
-                                            </div>
+                                            <div class="shape1"></div>
                                             <div class="title-box">
                                                 <h4>Request a Quote</h4>
                                             </div>
@@ -911,14 +990,14 @@
                                         <li data-filter=".filter-item" class="active"><span class="filter-text">View
                                                 All</span></li>
                                         <li data-filter=".industrial"><span class="filter-text">Industrial</span></li>
-                                        <li data-filter=".parking"><span class="filter-text">Parking</span></li>
+                                        <li data-filter=".decorative"><span class="filter-text">Decorative</span></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                                 <div class="project-one-text">
-                                    <p>A few of our recent epoxy and PU flooring projects for factories, warehouses and
-                                        parking areas.</p>
+                                    <p>A few of our recent epoxy and PU flooring projects for factories, warehouses,
+                                        homes and showrooms.</p>
                                 </div>
                             </div>
                         </div>
@@ -973,46 +1052,46 @@
                     </div>
                     <!--End Project One Single-->
                     <!--Sart Project One Single-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item parking">
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item decorative">
                         <div class="project-one__single wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div class="project-one__img">
-                                <img loading="lazy" src="assets/images/project/basement-parking-epoxy.jpg" alt="Parking Epoxy Flooring - CoatCraft Solutions" />
+                                <img loading="lazy" src="assets/images/project/3d-epoxy-flooring.jpg" alt="3D Epoxy Flooring - CoatCraft Solutions" />
                                 <div class="project-one__overly">
                                     <div class="project-one__overly-top">
                                         <div class="project-one__overly-title">
-                                            <p>Basement Parking</p>
-                                            <h2>Parking Epoxy Flooring</h2>
+                                            <p>3D Floor Art</p>
+                                            <h2>3D Epoxy Flooring</h2>
                                         </div>
                                         <div class="project-one__overly-icon">
-                                            <a class="img-popup" href="assets/images/project/basement-parking-epoxy.jpg">
+                                            <a class="img-popup" href="assets/images/project/3d-epoxy-flooring.jpg">
                                                 <i class="fa fa-plus" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
-                                    <p class="project-one__overly-bottom-text">Hard-wearing, anti-skid epoxy finish for vehicle traffic and easy cleaning.</p>
+                                    <p class="project-one__overly-bottom-text">Custom 3D ocean design sealed under a clear, glossy epoxy layer.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--End Project One Single-->
                     <!--Sart Project One Single-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item parking">
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item decorative">
                         <div class="project-one__single wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                             <div class="project-one__img">
-                                <img loading="lazy" src="assets/images/project/parking-pu-flooring.jpg" alt="PU Flooring for Parking - CoatCraft Solutions" />
+                                <img loading="lazy" src="assets/images/project/designer-epoxy-flooring.jpg" alt="Designer Epoxy Flooring - CoatCraft Solutions" />
                                 <div class="project-one__overly">
                                     <div class="project-one__overly-top">
                                         <div class="project-one__overly-title">
-                                            <p>Parking & Driveway</p>
-                                            <h2>PU Flooring for Parking</h2>
+                                            <p>Home & Showroom</p>
+                                            <h2>Designer Epoxy Flooring</h2>
                                         </div>
                                         <div class="project-one__overly-icon">
-                                            <a class="img-popup" href="assets/images/project/parking-pu-flooring.jpg">
+                                            <a class="img-popup" href="assets/images/project/designer-epoxy-flooring.jpg">
                                                 <i class="fa fa-plus" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
-                                    <p class="project-one__overly-bottom-text">Durable PU coating with clear bay and lane markings.</p>
+                                    <p class="project-one__overly-bottom-text">Seamless white epoxy with hand-poured metallic red veins.</p>
                                 </div>
                             </div>
                         </div>
